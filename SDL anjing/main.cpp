@@ -1,7 +1,9 @@
 #include <SDL.h>
 #include <cmath>
 #include <SDL_net.h>
-
+#include <WinSock2.h>
+#include <iostream>
+#pragma comment(lib, "ws2_32.lib")
 
 const float MAX_BALL_SPEED = 8.0;
 const float FRICTION = 0.98;
@@ -59,10 +61,21 @@ const int WALL8_WIDTH = 144;
 const int WALL8_HEIGHT = 20;
 SDL_Rect wall8Rect = { SCREEN_WIDTH / 3.58 - WALL8_WIDTH / 2, SCREEN_HEIGHT / 1.13 - WALL8_HEIGHT / 2, WALL8_WIDTH, WALL8_HEIGHT };
 
+struct Pos {
+    int x;
+    int y;
+};
+
+Pos null()
+{
+
+}
 //aim
 bool isAiming = false;
 SDL_Point aimStart;
 SDL_Point aimEnd;
+
+
 
 bool isCollidingWithHole() {
     int ballCenterX = ballRect.x + BALL_SIZE / 2;
@@ -101,6 +114,10 @@ Wall walls[] = {
 
 
 bool init() {
+
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         return false;
     }
@@ -117,6 +134,90 @@ bool init() {
 
     return true;
 }
+
+int juan = 213;
+int juan1 = 477;
+struct Data {
+    int num1;
+    int num2;
+};
+
+int server() {
+    WSADATA wsaData;
+    SOCKET serverSocket, clientSocket;
+    struct sockaddr_in serverAddr, clientAddr;
+    int clientAddrLen = sizeof(clientAddr);
+    Data receivedData;
+
+    // Initialize Winsock
+    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+        std::cerr << "Failed to initialize Winsock" << std::endl;
+        return 1;
+    }
+
+    // Create a server socket
+    serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+    if (serverSocket == INVALID_SOCKET) {
+        std::cerr << "Failed to create server socket" << std::endl;
+        WSACleanup();
+        return 1;
+    }
+
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_port = htons(8080); // Port to listen on
+    serverAddr.sin_addr.s_addr = INADDR_ANY;
+
+    // Bind the server socket to the local address
+    if (bind(serverSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == SOCKET_ERROR) {
+        std::cerr << "Failed to bind server socket" << std::endl;
+        closesocket(serverSocket);
+        WSACleanup();
+        return 1;
+    }
+
+    // Listen for incoming connections
+    if (listen(serverSocket, SOMAXCONN) == SOCKET_ERROR) {
+        std::cerr << "Failed to listen for connections" << std::endl;
+        closesocket(serverSocket);
+        WSACleanup();
+        return 1;
+    }
+
+    std::cout << "Server listening for incoming connections..." << std::endl;
+
+    // Accept an incoming connection
+    clientSocket = accept(serverSocket, (struct sockaddr*)&clientAddr, &clientAddrLen);
+    if (clientSocket == INVALID_SOCKET) {
+        std::cerr << "Failed to accept connection" << std::endl;
+        closesocket(serverSocket);
+        WSACleanup();
+        return 1;
+    }
+
+    std::cout << "Client connected." << std::endl;
+
+    // Receive data from the client
+    int bytesRead = recv(clientSocket, reinterpret_cast<char*>(&receivedData), sizeof(receivedData), 0);
+    if (bytesRead == SOCKET_ERROR) {
+        std::cerr << "Failed to receive data" << std::endl;
+    }
+    else if (bytesRead == 0) {
+        std::cerr << "Client disconnected" << std::endl;
+    }
+    else {
+        juan = receivedData.num1;
+        juan1 = receivedData.num2;
+        std::cout << "Received Data: num1=" << receivedData.num1 << ", num2=" << receivedData.num2 << std::endl;
+    }
+
+    // Close the client socket and server socket
+    closesocket(clientSocket);
+    closesocket(serverSocket);
+    WSACleanup();
+
+    return 0;
+}
+
 
 void close() {
     SDL_DestroyRenderer(gRenderer);
@@ -164,6 +265,7 @@ void drawGolfCourse() {
     SDL_SetRenderDrawColor(gRenderer, 0, 0, 0, 255);
     SDL_RenderFillRect(gRenderer, &wall8Rect);
 
+
     if (isAiming) {
         // Draw a line indicating the aiming direction
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -210,6 +312,8 @@ bool handleWallCollision() {
 }
 
 void update() {
+    //Data receive;
+    server();
     // Apply friction to slow down the ball
     ballVelocity.x *= FRICTION;
     ballVelocity.y *= FRICTION;
@@ -223,9 +327,12 @@ void update() {
         ballVelocity.y = 0.0;
     }
 
+
     // Update the ball's position
-    ballRect.x += ballVelocity.x;
-    ballRect.y += ballVelocity.y;
+    // ballRect.x += ballVelocity.x;
+    // ballRect.y += ballVelocity.y;
+    ballRect.x = juan;
+    ballRect.y = juan1;
 
     // Check for collisions with walls
     if (checkCollision(ballRect, wall1Rect)) {

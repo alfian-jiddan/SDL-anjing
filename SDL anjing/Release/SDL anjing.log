@@ -1,1 +1,57 @@
-﻿  SDL anjing.vcxproj -> E:\VsStudio\SDL anjing\Release\SDL anjing.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (SDL anjing.vcxproj, SDL project.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(600,1): warning C4005: 'INADDR_ANY': macro redefinition
+Z:\Random\Nyoba\SDL-anjing\SDL2\include\SDL_net.h(151,1): message : see previous definition of 'INADDR_ANY'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(602,1): warning C4005: 'INADDR_BROADCAST': macro redefinition
+Z:\Random\Nyoba\SDL-anjing\SDL2\include\SDL_net.h(160,1): message : see previous definition of 'INADDR_BROADCAST'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(603,1): warning C4005: 'INADDR_NONE': macro redefinition
+Z:\Random\Nyoba\SDL-anjing\SDL2\include\SDL_net.h(154,1): message : see previous definition of 'INADDR_NONE'
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(9,24): warning C4305: 'initializing': truncation from 'double' to 'float'
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(24,43): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(24,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(24,81): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(24,81): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(29,43): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(29,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(34,43): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(34,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(34,83): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(34,83): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(38,43): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(38,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(42,44): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(42,44): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(46,44): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(46,44): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(46,83): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(46,83): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(50,44): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(50,44): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(50,83): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(50,83): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(54,44): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(54,44): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(54,83): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(54,83): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(58,43): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(58,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(58,84): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(58,84): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(62,44): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(62,44): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(62,84): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(62,84): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(86,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(9,24): warning C4244: '*=': conversion from 'float' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(322,32): warning C4305: 'initializing': truncation from 'double' to 'float'
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(324,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(327,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(408,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(419,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Z:\Random\Nyoba\SDL-anjing\SDL anjing\main.cpp(420,47): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating code
+  3 of 25 functions (12.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  SDL anjing.vcxproj -> Z:\Random\Nyoba\SDL-anjing\Release\SDL Server.exe
